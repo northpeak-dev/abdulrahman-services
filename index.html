@@ -386,6 +386,42 @@
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0,0,0,0); border: 0;
     }
+
+    /* Portfolio enhancements */
+    .pf-subhead {
+      margin: 2.2rem 0 1rem; text-align: center;
+    }
+    .pf-subhead h3 {
+      margin: 0 0 .35rem; color: var(--teal-900); font-size: 1.25rem; font-weight: 800;
+    }
+    .pf-subhead p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .pf-compare {
+      display: grid; gap: 1.15rem;
+    }
+    @media (min-width: 760px) { .pf-compare { grid-template-columns: repeat(2, 1fr); } }
+    .pf-store-grid {
+      display: grid; gap: 1.15rem;
+    }
+    @media (min-width: 700px) { .pf-store-grid { grid-template-columns: repeat(3, 1fr); } }
+    .pf-card img.tall { aspect-ratio: 4/5; object-fit: cover; object-position: top; }
+    .pf-card img.wide { aspect-ratio: 16/11; object-fit: cover; object-position: top; }
+    .pf-pair {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; padding: .65rem .65rem 0;
+      background: var(--teal-50);
+    }
+    .pf-pair figure { margin: 0; }
+    .pf-pair img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--line); }
+    .pf-pair figcaption {
+      text-align: center; font-size: .72rem; font-weight: 800; margin-top: .35rem;
+      letter-spacing: .04em;
+    }
+    .pf-pair .before-cap { color: #a33; }
+    .pf-pair .after-cap { color: var(--teal-800); }
+    .pf-note-design {
+      background: #fff8e6; border: 1px dashed var(--gold-600); color: #7a5a10;
+      border-radius: 12px; padding: .7rem .9rem; font-size: .88rem; font-weight: 700;
+      margin: 0 0 1rem; text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -541,78 +577,130 @@
     <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-head">
-          <span class="badge-soft">نماذج أعمال</span>
-          <h2>عيّنات حقيقية من أعمالي</h2>
-          <p>هذه نماذج توضيحية من مواد أعددتها بنفسي للعرض — وليست تقييمات عملاء أو أرقام طلبات.</p>
+          <span class="badge-soft">نماذج أعمالي / Portfolio</span>
+          <h2>عيّنات من أسلوبي في العمل</h2>
+          <p>نماذج توضيحية أعددتها للعرض — بيانات وأسماء خيالية بالكامل، وليست أعمال عملاء حقيقيين ولا تقييمات.</p>
         </div>
 
+        <div class="pf-subhead">
+          <h3>سير ذاتية إنجليزية — قبل وبعد</h3>
+          <p>إعادة صياغة ATS-friendly بأسماء وبيانات خيالية (ليست بيانات حقيقية ولا بياناتي الشخصية).</p>
+        </div>
+        <div class="pf-compare">
+          <article class="pf-card">
+            <div class="pf-pair">
+              <figure>
+                <img src="assets/portfolio-cv1_before.jpg" width="700" height="933" alt="سيرة ذاتية قبل التحسين — Emily Carter (خيالية)" loading="lazy">
+                <figcaption class="before-cap">BEFORE</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio-cv1_after.jpg" width="700" height="933" alt="سيرة ذاتية بعد التحسين — Emily Carter (خيالية)" loading="lazy">
+                <figcaption class="after-cap">AFTER · ATS</figcaption>
+              </figure>
+            </div>
+            <div class="pf-body">
+              <span class="pf-tag">سيرة ذاتية · CV</span>
+              <h3>Emily Carter — Digital Marketing</h3>
+              <p>من سيرة مزدحمة وعامة إلى نسخة حديثة بنقاط إنجاز قابلة للقياس وتخطيط متوافق مع ATS. الشخصية والشركة خياليتان للعرض فقط.</p>
+            </div>
+          </article>
+
+          <article class="pf-card">
+            <div class="pf-pair">
+              <figure>
+                <img src="assets/portfolio-cv2_before.jpg" width="700" height="933" alt="سيرة ذاتية قبل التحسين — Daniel Okonkwo (خيالية)" loading="lazy">
+                <figcaption class="before-cap">BEFORE</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/portfolio-cv2_after.jpg" width="700" height="933" alt="سيرة ذاتية بعد التحسين — Daniel Okonkwo (خيالية)" loading="lazy">
+                <figcaption class="after-cap">AFTER · ATS</figcaption>
+              </figure>
+            </div>
+            <div class="pf-body">
+              <span class="pf-tag">سيرة ذاتية · CV</span>
+              <h3>Daniel Okonkwo — Junior Software / IT</h3>
+              <p>تحويل خبرة دعم فني ودراسة حاسوب إلى سيرة مرتبة بنتائج رقمية ومهارات واضحة. جميع الأسماء والجهات وهمية.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="pf-subhead" style="margin-top:2.6rem">
+          <h3>نماذج من تصاميمي — متاجر سلة</h3>
+          <p>تصاميم واجهات للمتاجر (عينة أسلوب) — ليست أعمال عملاء سابقين.</p>
+        </div>
+        <div class="pf-note-design">نماذج من تصاميمي للعرض فقط · SAMPLE · NOT FOR REUSE</div>
+        <div class="pf-store-grid">
+          <article class="pf-card">
+            <img class="tall" src="assets/portfolio-abaya-desktop.jpg" width="1100" height="1375" alt="نموذج تصميم متجر عبايات — سطح المكتب" loading="lazy">
+            <div class="pf-body">
+              <span class="pf-tag">نماذج من تصاميمي</span>
+              <h3>متجر عبايات — Desktop</h3>
+              <p>واجهة متجر أنيقة بإطار لابتوب، هوية داكنة وتفاصيل منتج — عينة تصميم.</p>
+            </div>
+          </article>
+          <article class="pf-card">
+            <img class="tall" src="assets/portfolio-abaya-mobile.jpg" width="900" height="1125" alt="نموذج تصميم متجر عبايات — جوال" loading="lazy">
+            <div class="pf-body">
+              <span class="pf-tag">نماذج من تصاميمي</span>
+              <h3>متجر عبايات — Mobile</h3>
+              <p>نفس الهوية على شاشة جوال بإطار هاتف — عينة تصميم.</p>
+            </div>
+          </article>
+          <article class="pf-card">
+            <img class="tall" src="assets/portfolio-perfume-dark.jpg" width="1200" height="2625" alt="نموذج تصميم متجر عطور داكن" loading="lazy">
+            <div class="pf-body">
+              <span class="pf-tag">نماذج من تصاميمي</span>
+              <h3>متجر عطور — Dark theme</h3>
+              <p>واجهة عطور بطابع فاخر داكن — نموذج تصميمي للعرض.</p>
+            </div>
+          </article>
+          <article class="pf-card">
+            <img class="tall" src="assets/portfolio-flowers-desktop.jpg" width="1100" height="1375" alt="نموذج تصميم متجر زهور — سطح المكتب" loading="lazy">
+            <div class="pf-body">
+              <span class="pf-tag">نماذج من تصاميمي</span>
+              <h3>متجر زهور «وردة» — Desktop</h3>
+              <p>متجر ورد وباقات بهوية وردية دافئة وباقات منتجات — عينة تصميم جديدة.</p>
+            </div>
+          </article>
+          <article class="pf-card">
+            <img class="tall" src="assets/portfolio-flowers-mobile.jpg" width="900" height="1125" alt="نموذج تصميم متجر زهور — جوال" loading="lazy">
+            <div class="pf-body">
+              <span class="pf-tag">نماذج من تصاميمي</span>
+              <h3>متجر زهور «وردة» — Mobile</h3>
+              <p>نسخة الجوال لنفس متجر الورود — عينة تصميم.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="pf-subhead" style="margin-top:2.6rem">
+          <h3>نماذج أخرى</h3>
+          <p>عروض اعتماد، عروض تقديمية، وترجمة — مواد توضيحية.</p>
+        </div>
         <div class="pf-grid">
           <article class="pf-card">
-            <img src="assets/sample-tender.jpg" width="960" height="564" alt="نموذج فهرس عرض فني لمنافسة صيانة وتشغيل" loading="lazy">
+            <img class="wide" src="assets/sample-tender.jpg" width="960" height="564" alt="نموذج فهرس عرض فني لمنافسة صيانة وتشغيل" loading="lazy">
             <div class="pf-body">
               <span class="pf-tag">عروض اعتماد</span>
               <h3>فهرس عرض فني (نموذج توضيحي)</h3>
-              <p>هيكل منظم لعرض فني لمنافسة صيانة وتشغيل مرافق — يوضح الفهم، المنهجية، الجدول، الفريق والجودة. منشأة ومشروع خياليان لأغراض العرض فقط.</p>
+              <p>هيكل منظم لعرض فني لمنافسة صيانة وتشغيل مرافق — منشأة ومشروع خياليان لأغراض العرض فقط.</p>
             </div>
           </article>
-
           <article class="pf-card">
-            <img src="assets/sample-cv.jpg" width="960" height="564" alt="نموذج سيرة ذاتية وخطاب تقديم" loading="lazy">
-            <div class="pf-body">
-              <span class="pf-tag">سيرة ذاتية</span>
-              <h3>سيرة ذاتية وخطاب تقديم</h3>
-              <p>عيّنة من صياغة سيرة ذاتية وخطاب تقديم بأسلوب مهني واضح، مناسبة للفرز الآلي (ATS) وللمراجعة البشرية.</p>
-            </div>
-          </article>
-
-          <article class="pf-card">
-            <img src="assets/sample-presentation.jpg" width="960" height="564" alt="نموذج عرض تقديمي" loading="lazy">
+            <img class="wide" src="assets/sample-presentation.jpg" width="960" height="564" alt="نموذج عرض تقديمي" loading="lazy">
             <div class="pf-body">
               <span class="pf-tag">عروض تقديمية</span>
               <h3>عرض تقديمي عربي</h3>
-              <p>شريحة من عرض تقديمي عربي بأسلوب نظيف ومرتب — مناسب لعروض المشاريع أو المقترحات التجارية.</p>
+              <p>شريحة من عرض تقديمي عربي بأسلوب نظيف ومرتب — مناسب لعروض المشاريع أو المقترحات.</p>
             </div>
           </article>
-
           <article class="pf-card">
-            <img src="assets/sample-translation.jpg" width="960" height="564" alt="نموذج ترجمة عربي إنجليزي" loading="lazy">
+            <img class="wide" src="assets/sample-translation.jpg" width="960" height="564" alt="نموذج ترجمة عربي إنجليزي" loading="lazy">
             <div class="pf-body">
               <span class="pf-tag">ترجمة</span>
               <h3>ترجمة عربي ⇄ إنجليزي</h3>
-              <p>عيّنة ترجمة ثنائية اللغة بأسلوب طبيعي يحافظ على المعنى والنبرة المهنية دون ترجمة حرفية جامدة.</p>
+              <p>عيّنة ترجمة ثنائية اللغة بأسلوب طبيعي يحافظ على المعنى والنبرة المهنية.</p>
             </div>
           </article>
-        </div>
-
-        <!-- Demo Salla-style store -->
-        <div class="demo-store" id="demo-store" aria-label="نموذج توضيحي لمتجر سلة">
-          <div class="demo-banner">
-            <span class="label">نموذج توضيحي</span>
-            <p class="store-name">عطور النخبة</p>
-            <p class="store-tag">متجر عطور فاخرة — تصميم واجهة بأسلوب متاجر سلة (خيالي للعرض فقط)</p>
-          </div>
-          <div class="demo-nav" aria-hidden="true">
-            <span>الرئيسية</span><span>العطور الرجالية</span><span>العطور النسائية</span><span>العروض</span><span>تواصل معنا</span>
-          </div>
-          <div class="demo-note">هذا القسم نموذج تصميمي توضيحي بالكامل — متجر وهمي باسم «عطور النخبة» وليس متجر عميل حقيقي.</div>
-          <div class="demo-products">
-            <article class="product">
-              <div class="p-visual p1">عود الليل</div>
-              <h4>عطر عود الليل — 100 مل</h4>
-              <div class="price-tag">420 ر.س</div>
-              <p>
-                نفحات دافئة من العود الكمبودي مع لمسة خشب الصندل والعنبر. ثبات عالٍ يناسب السهرات والمناسبات الرسمية. يأتي بعلبة فاخرة مع قنينة زجاجية قابلة لإعادة التعبئة.
-              </p>
-            </article>
-            <article class="product">
-              <div class="p-visual p2">مسك النسيم</div>
-              <h4>مسك النسيم — 50 مل</h4>
-              <div class="price-tag">265 ر.س</div>
-              <p>
-                مزيج خفيف ومنعش من المسك الأبيض وزهر البرتقال مع قاعدة ناعمة من الفانيليا. مثالي للاستخدام اليومي وفي أجواء المكتب دون إزعاج.
-              </p>
-            </article>
-          </div>
         </div>
       </div>
     </section>
